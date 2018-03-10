@@ -11,6 +11,7 @@ import {
 import Header from './components/headerComponent/header.js';
 import Footer from './components/footerComponent/footer.js';
 import Homepage from './components/pages/homePage.js';
+import Projects from './components/pages/projects.js';
 
 //includes
 import './assets/css/default.min.css';
@@ -19,15 +20,18 @@ import './assets/css/default.min.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Router>
+        <div className="App">
 
-        <Header />
+          <Header />
 
-          <Homepage />
+            <Route exact path='/' component={Homepage} />
+            <Route exact path='/projects' component={Projects} />
 
-        <Footer />
+          <Footer />
 
-      </div>
+        </div>
+      </Router>
     );
   }
 }
