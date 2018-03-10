@@ -1,6 +1,11 @@
 //Confused? Watch the tutorial again @ https://www.youtube.com/watch?v=nusgoj74a3Y
 
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 
 //components
 import Header from './components/headerComponent/header.js';
