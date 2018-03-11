@@ -12,6 +12,7 @@ import Header from './components/headerComponent/header.js';
 import Footer from './components/footerComponent/footer.js';
 import Homepage from './components/pages/homePage.js';
 import Projects from './components/pages/projects.js';
+import Contact from './components/pages/contact.js'
 
 //includes
 import './assets/css/default.min.css';
@@ -25,8 +26,9 @@ class App extends Component {
 
           <Header />
 
-            <Route exact path='/' component={Homepage} />
+            <Route exact path='/main' component={Homepage} />
             <Route exact path='/projects' component={Projects} />
+            <Route exact path='/contact' component={Contact} />
 
           <Footer />
 
