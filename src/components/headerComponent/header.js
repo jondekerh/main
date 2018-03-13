@@ -9,18 +9,18 @@ class Header extends Component {
       <header>
 
         <div className = 'logo'>
-          LOGO
+          Jon Deker Houston
         </div>
 
         <nav>
           <ul>
-            <li className = 'first'>
+            <li className = 'home'>
               <Link to='/main'>Home</Link>
             </li>
-            <li className = 'second'>
+            <li className = 'projects'>
               <Link to='/projects'>Projects</Link>
             </li>
-            <li className = 'third'>
+            <li className = 'contact'>
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
