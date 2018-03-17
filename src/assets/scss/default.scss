@@ -55,6 +55,13 @@ header {
   }
 }
 
-footer {
-  font-size: 8px;
+.chatWrapper {
+  background: $lightGray;
+  padding: 30px;
+
+  .chatOutput {
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #cacaca;
+  }
 }
