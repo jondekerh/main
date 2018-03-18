@@ -21,6 +21,9 @@ class Footer extends Component {
 
     e.preventDefault();
 
+    this.setState({inputValue: ''});
+    this.setState({outputValue: <p><font color='#cacaca'><i>x is typing really fast...</i></font></p>});
+
     var payload = {
       "currentNode": "",
       "complete": null,
