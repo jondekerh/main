@@ -63,5 +63,9 @@ header {
     border-style: dashed;
     border-width: 1px;
     border-color: #cacaca;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*padding does cause issues since it controls how big box is around words,
+    making it unnecessarily large. fix. scroll box?*/
   }
 }
