@@ -49,10 +49,10 @@ class Footer extends Component {
     request.post(options, function(err, res, body) {
       console.log('ERROR: \n', err);
       console.log('JSON OBJ SENT: \n', options.json);
-      console.log('RESPONSE: \n', body);
+      console.log('RESPONSE: \n', res);
 
       //var story = body.intent.storyId;
-      var sResponse = body.speechResponse;
+      var sResponse = res.body.speechResponse;
       this.setState({outputValue: sResponse});
     }.bind(this));
 
