@@ -46,7 +46,7 @@ class Footer extends Component {
       json: payload
     }
 
-    request.post(options, function(err, res, body) {
+    request.post(options, function(err, res) {
       console.log('ERROR: \n', err);
       console.log('JSON OBJ SENT: \n', options.json);
       console.log('RESPONSE: \n', res);
