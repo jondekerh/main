@@ -72,6 +72,9 @@ class Footer extends Component {
           <div className='chatOutput'>
             {this.state.outputValue}
           </div>
+          <a className='shoutOut' href='https://github.com/alfredfrancis/ai-chatbot-framework'>
+            Shout out to alfredfrancis for the framework this bot runs on!
+          </a>
         </div>
 
       </footer>
