@@ -68,4 +68,9 @@ header {
     /*padding does cause issues since it controls how big box is around words,
     making it unnecessarily large. fix. scroll box?*/
   }
+
+  .shoutOut {
+    font-size: 10px;
+    color: #cacaca;
+  }
 }
