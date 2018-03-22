@@ -26,7 +26,7 @@ class App extends Component {
 
           <Header />
 
-            <Route exact path='/main' component={Homepage} />
+            <Route exact path='/' component={Homepage} />
             <Route exact path='/projects' component={Projects} />
             <Route exact path='/contact' component={Contact} />
 
