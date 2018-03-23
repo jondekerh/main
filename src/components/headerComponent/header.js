@@ -20,8 +20,11 @@ class Header extends Component {
             <li className = 'projects'>
               <Link to='/projects'>Projects</Link>
             </li>
-            <li className = 'contact'>
-              <Link to='/contact'>Contact</Link>
+            <li className = 'github'>
+              <a href='https://github.com/jondekerh'>Github</a><br></br>
+            </li>
+            <li className = 'linkedin'>
+              <a href='https://www.linkedin.com/in/jon-houston-ba499214a/'>Linkedin</a>
             </li>
           </ul>
         </nav>
