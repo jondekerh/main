@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {
-  Button
+  Button,
+  Collapse
 } from 'react-bootstrap';
 const request = require('request');
 
 
-class Footer extends Component {
+class ChatBot extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -88,10 +89,12 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer>
+      <chatBot>
 
+        <div className='outerWrapper'>
+        <Button bsStyle='primary' className='chatMinMax' onClick={this.changeIsOpenState} block>{this.state.minMax}</Button>
+        <Collapse in={this.state.isOpen}>
         <div className='chatWrapper'>
-          <Button className='chatMinMax' onClick={this.changeIsOpenState} block>{this.state.minMax}</Button>
           <div className='chatInput'>
             <form onSubmit={this.handleSubmit}>
               You: <input type='text' value={this.state.inputValue} placeholder='Type your question' onChange={this.handleChange}></input>
@@ -105,10 +108,12 @@ class Footer extends Component {
             Shout out to alfredfrancis for the framework this bot runs on!
           </a>
         </div>
+        </Collapse>
+        </div>
 
-      </footer>
+      </chatBot>
     );
   }
 }
 
-export default Footer;
+export default ChatBot;

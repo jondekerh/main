@@ -46,6 +46,10 @@ header {
   }
 }
 
+.homePageContent {
+  padding-right: 32%;
+}
+
 .projectEntry {
   text-align: left;
   padding-right: 32%;
@@ -53,6 +57,14 @@ header {
   p {
 
   }
+}
+
+.chatMinMax {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  z-index: 1;
 }
 
 .chatWrapper {
@@ -64,10 +76,6 @@ header {
   width: 30%;
   padding: 10px;
 
-  .chatMinMax {
-
-  }
-
   .chatInput {
     padding-top: 3%;
     padding-bottom: 3%;
@@ -77,11 +85,13 @@ header {
     border-style: dashed;
     border-width: 1px;
     border-color: #cacaca;
-    height: 50%;
+    height: 55%;
     overflow: scroll;
     overflow-x: hidden;
-    /*padding does cause issues since it controls how big box is around words,
-    making it unnecessarily large. fix. scroll box?*/
+
+    .well {
+      height:
+    }
   }
 
   .shoutOut {
