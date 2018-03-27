@@ -7,10 +7,9 @@ import {
   Link
 } from 'react-router-dom';
 
-
 //components
 import Header from './components/headerComponent/header.js';
-import Footer from './components/footerComponent/footer.js';
+import ChatBot from './components/footerComponent/chatBot.js';
 import Homepage from './components/pages/homePage.js';
 import Projects from './components/pages/projects.js';
 
@@ -29,7 +28,7 @@ class App extends Component {
             <Route exact path='/' component={Homepage} />
             <Route exact path='/projects' component={Projects} />
 
-          <Footer />
+          <ChatBot />
 
         </div>
       </Router>
