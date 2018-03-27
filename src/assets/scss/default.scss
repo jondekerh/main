@@ -47,24 +47,39 @@ header {
 }
 
 .projectEntry {
-  text-align: center;
+  text-align: left;
+  padding-right: 32%;
 
   p {
-    padding-left: 225px;
-    padding-right: 225px;
+
   }
 }
 
 .chatWrapper {
   background: $lightGray;
-  padding: 30px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 40%;
+  width: 30%;
+  padding: 10px;
+
+  .chatMinMax {
+
+  }
+
+  .chatInput {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
 
   .chatOutput {
     border-style: dashed;
     border-width: 1px;
     border-color: #cacaca;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: 50%;
+    overflow: scroll;
+    overflow-x: hidden;
     /*padding does cause issues since it controls how big box is around words,
     making it unnecessarily large. fix. scroll box?*/
   }

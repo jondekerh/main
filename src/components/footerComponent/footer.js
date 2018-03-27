@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
+import {
+  Button
+} from 'react-bootstrap';
 const request = require('request');
+
 
 class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       inputValue: '',
-      outputValue: <br></br>
+      outputValue: <br></br>,
+      isOpen: true,
+      minMax: 'minimize'
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.changeIsOpenState = this.changeIsOpenState.bind(this);
   }
 
   handleChange(e) {
@@ -58,14 +65,36 @@ class Footer extends Component {
 
   }
 
+  changeIsOpenState() {
+    this.setState({isOpen: !this.state.isOpen}, this.handleMinMax);
+  }
+
+  handleMinMax() {
+    if (this.state.isOpen) {
+      this.setState({minMax: 'minimize'});
+    }
+    else {
+      this.setState({minMax: 'maximize'});
+    };
+    console.log(this.state.isOpen);
+  }
+
+//  componentWillUpdate() {
+//    this.handleMinMax1;
+//    console.log(this.state.isOpen);
+//  }
+
+  //need a way of checking the change or something every time the component updates
+
   render() {
     return (
       <footer>
 
         <div className='chatWrapper'>
+          <Button className='chatMinMax' onClick={this.changeIsOpenState} block>{this.state.minMax}</Button>
           <div className='chatInput'>
             <form onSubmit={this.handleSubmit}>
-              You: <input type='text' value={this.state.inputValue} placeholder='placeholder' onChange={this.handleChange}></input>
+              You: <input type='text' value={this.state.inputValue} placeholder='Type your question' onChange={this.handleChange}></input>
               <button type='button' onClick={this.handleSubmit}>submit</button>
             </form>
           </div>
