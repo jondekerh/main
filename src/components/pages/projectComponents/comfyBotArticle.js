@@ -16,23 +16,22 @@ class ComfyBotArticle extends Component {
 
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleOpenChange = this.handleOpenChange.bind(this);
 
   }
 
   //changes the state of 'open' and alters the text of the button whenever it's pressed
-  handleChange(e) {
-    var open = this.state.open;
+  handleOpenChange(e) {
+    this.setState({ open: !this.state.open }, this.handleArticleChange);
+  }
 
-    if (open) {
-      this.setState({buttonVal: 'read more about ' + projectName});
+  handleArticleChange() {
+    if (this.state.open) {
+      this.setState({buttonVal: 'read less'});
     }
     else {
-    this.setState({buttonVal: 'read less'});
+    this.setState({buttonVal: 'read more about ' + projectName});
     };
-
-    this.setState({ open: !this.state.open });
-
   }
 
   //text in the render differs between components
@@ -52,7 +51,7 @@ class ComfyBotArticle extends Component {
         </span></Collapse>
       </p>
 
-      <Button bsStyle='link' onClick={this.handleChange}>{this.state.buttonVal}</Button>
+      <Button bsStyle='link' onClick={this.handleOpenChange}>{this.state.buttonVal}</Button>
       </div>
 
     );
