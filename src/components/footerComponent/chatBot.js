@@ -66,6 +66,9 @@ class ChatBot extends Component {
 
   }
 
+  //it is necessary to pass the second part of this func as a callback for after the component updates.
+  //this is because the actual state doesnt update until the component updates, so we need to set the
+  //state and then update in order to use the altered state.
   changeIsOpenState() {
     this.setState({isOpen: !this.state.isOpen}, this.handleMinMax);
   }
@@ -80,25 +83,17 @@ class ChatBot extends Component {
     console.log(this.state.isOpen);
   }
 
-//  componentWillUpdate() {
-//    this.handleMinMax1;
-//    console.log(this.state.isOpen);
-//  }
-
-  //need a way of checking the change or something every time the component updates
-
   render() {
     return (
       <chatBot>
 
-        <div className='outerWrapper'>
         <Button bsStyle='primary' className='chatMinMax' onClick={this.changeIsOpenState} block>{this.state.minMax}</Button>
         <Collapse in={this.state.isOpen}>
         <div className='chatWrapper'>
           <div className='chatInput'>
             <form onSubmit={this.handleSubmit}>
-              You: <input type='text' value={this.state.inputValue} placeholder='Type your question' onChange={this.handleChange}></input>
               <button type='button' onClick={this.handleSubmit}>submit</button>
+              <span className='inputSpan'><input type='text' value={this.state.inputValue} placeholder='Type your question' onChange={this.handleChange}></input></span>
             </form>
           </div>
           <div className='chatOutput'>
@@ -109,7 +104,6 @@ class ChatBot extends Component {
           </a>
         </div>
         </Collapse>
-        </div>
 
       </chatBot>
     );

@@ -79,6 +79,20 @@ header {
   .chatInput {
     padding-top: 3%;
     padding-bottom: 3%;
+
+    .inputSpan {
+      display: block;
+      overflow: hidden;
+      padding-right:1%;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    button {
+      float: right;
+    }
   }
 
   .chatOutput {
@@ -88,10 +102,6 @@ header {
     height: 55%;
     overflow: scroll;
     overflow-x: hidden;
-
-    .well {
-      height:
-    }
   }
 
   .shoutOut {
