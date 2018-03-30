@@ -14,12 +14,6 @@ class Header extends Component {
 
         <nav>
           <ul>
-            <li className = 'home'>
-              <Link to='/'>Home</Link>
-            </li>
-            <li className = 'projects'>
-              <Link to='/projects'>Projects</Link>
-            </li>
             <li className = 'github'>
               <a href='https://github.com/jondekerh'>Github</a><br></br>
             </li>

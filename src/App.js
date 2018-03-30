@@ -10,7 +10,6 @@ import {
 //components
 import Header from './components/headerComponent/header.js';
 import ChatBot from './components/footerComponent/chatBot.js';
-import Homepage from './components/pages/homePage.js';
 import Projects from './components/pages/projects.js';
 
 //includes
@@ -25,8 +24,8 @@ class App extends Component {
 
           <Header />
 
-            <Route exact path='/' component={Homepage} />
-            <Route exact path='/projects' component={Projects} />
+            {/*although currently not using Link, it may be necessary later. see react-browser-router docs*/}
+            <Route exact path='/' component={Projects} />
 
           <ChatBot />
 
