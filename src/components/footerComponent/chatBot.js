@@ -30,7 +30,7 @@ class ChatBot extends Component {
     e.preventDefault();
 
     this.setState({inputValue: ''});
-    this.setState({outputValue: <p><font color='#cacaca'><i>BOT_NAME is typing really fast...</i></font></p>});
+    this.setState({outputValue: <p><font color='#cacaca'><i>APE is typing really fast...</i></font></p>});
 
     var payload = {
       "currentNode": "",
