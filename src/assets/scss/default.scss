@@ -44,6 +44,14 @@ header {
         font-size: 19px;
         line-height: normal;
         color: $white;
+        @include transition(.4s ease-in-out);
+        cursor: pointer;
+
+        &:hover {
+          color: $orange;
+          @include transition(.4s ease-in-out);
+        }
+
       }
 
     }
@@ -79,9 +87,9 @@ header {
 
   h1 {
 
-  }
-
-  p {
+    a {
+      text-decoration: none !important;
+    }
 
   }
 }
